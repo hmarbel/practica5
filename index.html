@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de registro - Mi web</title>
+    <style>
+      body {
+        background: hsla(240, 2%, 83%, 1.0);
+        margin: 0;
+        color: #CEF3FF;
+      }
+      .form {
+        width: 340px;
+        height: 800px;
+        background: #007CA4;
+        border-radius: 8px;
+        box-shadow: 0 0 40px -10px #000;
+        padding: 20px 30px;
+        max-width: calc(100vw - 40px);
+        box-sizing: border-box;
+        position: relative;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -170px;
+        /* -1/2 width */
+        margin-top: -400px;
+        font-family: "Poppins", sans-serif;
+      }
+      h2 {
+        margin: 10px 0;
+        padding-bottom: 10px;
+        width: auto;
+        color: white;
+        border-bottom: 3px solid white;
+      }
+      .input input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        background: none;
+        outline: none;
+        resize: none;
+        border: 0;
+        transition: all 0.3s;
+        border-bottom: 2px solid #49B8CE;
+        margin-bottom: -4px;
+        color: white;
+      }
+      .input input::placeholder {
+        color: #79BDDC;
+      }
+
+      .input {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .combo select {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        background: none;
+        outline: none;
+        resize: none;
+        border: 0;
+        transition: all 0.3s;
+        border-bottom: 2px solid #49B8CE;
+        margin-bottom: -4px;
+        cursor: pointer;
+        color: #79BDDC;
+      }
+      .combo select:focus {
+        border-bottom: 2px solid white;
+      }
+
+      input:focus {
+        border-bottom: 2px solid white;
+      }
+      .input p:before,
+      .combo p:before,
+      .radio p:before {
+        content: attr(type);
+        display: block;
+        margin: 28px 0 0;
+        color: #79BDDC;
+      }
+      .input p,
+      .combo p,
+      .radio p {
+        font-size: 13px;
+        margin-bottom: -4px;
+      }
+
+      .radio label {
+        color: #79BDDC;
+        font-size: 13px;
+      }
+
+      .radio {
+        margin-bottom: -10px;
+      }
+
+      .checkbox {
+        margin-top: 20px;
+        color: #79BDDC;
+        font-size: 13px;
+      }
+
+      button {
+        float: right;
+        padding: 8px 12px;
+        margin: 20px 0 0 0;
+        border: 2px solid white;
+        background: white;
+        color: #007CA4;
+        cursor: pointer;
+        transition: all 0.3s;
+        border-radius: 6px;
+      }
+      button:hover {
+        background: #EBCC31;
+        border-color: #EBCC31;
+        color: white;
+      }
+      .bottom_menu {
+        content: "Hi";
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        background: #50505a;
+        color: #fff;
+        width: 320px;
+        padding: 16px 4px 16px 0;
+        border-radius: 6px;
+        font-size: 13px;
+        box-shadow: 10px 10px 40px -14px #000;
+      }
+      span {
+        margin: 0 5px 0 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <form>
+        <h2>Registro</h2>
+        <div class="input">
+          <p>Nombre(s):</p>
+          <input placeholder="John" maxlength="50" required/>
+        </div>
+
+        <div class="input">
+          <p>Apellido(s):</p>
+          <input placeholder="Doe" maxlength="50" required/>
+        </div>
+
+        <div class="input">
+          <p>E-mail:</p>
+          <input placeholder="example@mail.com" required/>
+        </div>
+
+        <div class="combo">
+          <p>Población:</p>
+          <select>
+            <option value="Orizaba">Orizaba</option>
+            <option value="C&oacute;rdoba">Córdoba</option>
+            <option value="Xalapa">Xalapa</option>
+            <option value="Veracruz">Veracruz</option>
+          </select>
+        </div>
+
+        <div class="radio">
+          <p>Sexo:</p>
+          <input type="radio" name="sexo" id="m" value="Masculino" required />
+          <label for="m">Masculino</label>
+          <input type="radio" name="sexo" id="f" value="Femenino" />
+          <label for="f">Femenino</label>
+        </div>
+
+        <div class="input">
+          <p>Mensaje:</p>
+          <input placeholder="Qu&eacute; deseas saber..." />
+        </div>
+
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            id="novedades"
+            name="novedades"
+            value="Novedades"
+            checked
+          />
+          <label for="novedades"
+            >Deseo recibir informaci&oacute;n sobre novedades y ofertas.</label
+          ><br />
+
+          <input
+            type="checkbox"
+            id="condiciones"
+            name="condiciones"
+            value="Condiciones"
+            required
+          />
+          <label for="condiciones"
+            >Declaro haber le&iacute;do y aceptar las condiciones generales del
+            programa y la normativa sobre protecci&oacute;n de datos.</label
+          ><br />
+        </div>
+
+        <div>
+          <button type="submit" formmethod="get" onclick="">Registrar</button>
+        </div>
+
+        <div name="poblacion" class="bottom_menu">
+          <span></span>238 2013 700<span></span> husaimb22@gmail.com
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
